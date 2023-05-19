@@ -1,0 +1,505 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,100;1,800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* UTILITY CLASS */
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* BODY SECTION */
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "poppins", sans-serif;
+  background: rgb(45, 45, 45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* HEADER SECTION */
+
+header {
+  position: relative;
+  width: 80%;
+  height: 90%;
+  /*border: 1px solid #ffff;*/
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 12px 25px -9 #000;
+}
+header::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../IMAGS & VIDEOS/money heist1.jpg") no-repeat center center
+    cover;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #000);
+  z-index: -1;
+}
+
+/* CSS FOR VIDEO+++++++++++++++++++++++++++++++++++++++++++++ */
+
+header video {
+  position: absolute;
+  width: 120%;
+  height: 190%;
+  top: -47%;
+  z-index: -1;
+}
+
+/* NAVIGATION TOP+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+header nav {
+  width: 100%;
+  height: 10%;
+  /* border: 1px solid #ffff; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 50px;
+}
+/* header nav .logo img{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+header nav .logo img {
+  width: 90px;
+}
+header nav .logo ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+header nav .logo ul li {
+  padding: 3px 15px;
+}
+header nav .logo ul a {
+  text-decoration: none;
+  color: #ffff;
+  font-size: 12px;
+  font-weight: bold;
+  transition: 0.3s linear;
+}
+header nav .logo ul li a:hover {
+  color: rgb(255, 255, 255, 0.7);
+}
+
+/* MAKING A SEARCH BOX +++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.saerch-box {
+  position: relative;
+}
+header input {
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background: rgb(225, 225, 225, 0.3);
+  color: #ffff;
+  margin-right: 10px;
+}
+.search-box img {
+  width: 23px;
+  height: 23px;
+  margin-top: px;
+  background-color: aqua;
+  border-radius: 50%;
+}
+
+/* MAKING A CARD FOR SEARCH +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.search-box .search-card {
+  position: absolute;
+  width: 320px;
+  height: 270px;
+  /* border: 1px solid #ffff; */
+  right: 0;
+  top: 63px;
+  z-index: 99999;
+  overflow: auto;
+}
+
+/* DESIGN SCROLL BAR +++++++++++++++++++++++++++++++++++++++++++*/
+
+.search-card::-webkit-scrollbar {
+  width: 5px;
+  background: rgb(225, 225, 225, 0.3);
+  border-radius: 5px;
+  visibility: hidden;
+}
+.search-card:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+.search-card:hover::-webkit-scrollbar {
+  visibility: visible;
+}
+
+/* CREATING A MINI CARD FOR SEARCH++++++++++++++++++++++++++++++++++++++++ */
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 5px;
+  padding: 3px 0;
+  text-decoration: none;
+  display: none;
+}
+/* .search-card{
+    margin-left: 50px;
+    top: 50px;
+} */
+.card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(225, 225, 225, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  z-index: -1;
+ 
+}
+
+#card-img img {
+  width: 28px;
+  height: 90%;
+  border-radius: 2px;
+  margin-left: 8px;
+}
+.card-text {
+  margin-left: 10px;
+  color: #ffff;
+}
+.card-text span {
+  background-color: yellow;
+  color: #000;
+  padding: 0 3px;
+  font-weight: 500;
+  margin: 0 5px 0 10px;
+}
+.card-text h3 {
+  font-size: 15px;
+  line-height: 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 250px;
+}
+.card-text p {
+  font-size: 10px;
+  color: rgb(255, 255, 255, 0.8);
+}
+
+/* CONTENT PAGE ABOUT MOVIES DETAILS++++++++++++++++++++++++++++++ */
+
+.content {
+  position: relative;
+  color: #ffff;
+  margin-top: 50px;
+  padding-left: 50px;
+}
+.content h1 {
+  font-size: 50px;
+}
+.content p {
+  font-size: 11px;
+  width: 250px;
+  word-break: break-all;
+}
+.details {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.details h5 {
+  color: rgb(142, 230, 48);
+  font-size: 10px;
+  margin-right: 10px;
+}
+.details h6 {
+  font-size: 10px;
+  margin-right: 10px;
+  color: rgb(255, 255, 255, 0.8);
+}
+.details h4 {
+  color: #ffff;
+  margin-right: 10px;
+  font-size: 10px;
+}
+.details h3 {
+  color: #ffff;
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+}
+.title span{
+  background-color: rgba(132, 17, 17, 0.323);
+  border-radius: 6px;
+  
+}
+.details span {
+  background-color: yellow;
+  color: #000;
+  padding: 0 1px;
+  margin: 0 5px 0 5px;
+  font-weight: 500;
+}
+.details i {
+  margin-right: 5px;
+  height: 20px;
+}
+
+
+/* STYLING FOR TWO BUTTINS+++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+.btn {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 200px;
+  padding: auto;
+}
+.btn a {
+  padding: auto;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 10px;
+  /* background: linear-gradient(90deg, #00bdff, #0079ff); */
+  color: #ffff;
+  border-radius: 5px;
+  margin-left: 5px;
+
+ 
+}
+.btnn i{
+  margin-left: 5px;
+}
+.btnn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  height: 36px;
+  width: 150px;
+  border-radius: 5px;
+  border: none;
+  background: linear-gradient(90deg, #00bdff, #0079ff);
+  animation: button 1s linear infinite;
+}
+
+/* ADDING TRANSITION IN BUTTON USING KEYFRAME+++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+@keyframes button {
+  0% {
+    background: linear-gradient(0deg, #00bdff, #0079ff);
+  }
+  10% {
+    background: linear-gradient(25deg, #00bdff, #0079ff);
+  }
+  22% {
+    background: linear-gradient(75deg, #00bdff, #0079ff);
+  }
+  36% {
+    background: linear-gradient(120deg, #00bdff, #0079ff);
+  }
+  45% {
+    background: linear-gradient(180deg, #00bdff, #0079ff);
+  }
+  55% {
+    background: linear-gradient(229deg, #00bdff, #0079ff);
+  }
+  66% {
+    background: linear-gradient(297deg, #00bdff, #0079ff);
+  }
+  78% {
+    background: linear-gradient(318deg, #00bdff, #0079ff);
+  }
+  100% {
+    background: linear-gradient(360deg, #00bdff, #0079ff);
+  }
+}
+
+/* ANOTHER SECTION++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+.section {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  padding: 0 50px;
+  bottom: 20px;
+  color: #ffff;
+}
+.section .cards {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  /* border: 1px solid #ffff; */
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+/* THIS CODE FOR REMOVING SCROOLBAR++++++++++++++++++++++++++++++++++ */
+
+
+.section .cards::-webkit-scrollbar {
+  background-color: #8ea0a100;
+  display: none;
+}
+
+/* +++++++++++++++++++++THIS CODE FOR POPULAR MOVIES LIST++++++++++++++++++++++++++++++++++++++++ */
+
+.cards .card-1 {
+  position: relative;
+  min-width: 130px;
+  height: 180px;
+  /* border: 1px solid #ffff; */
+  border-radius: 7px;
+  margin-right: 10px;
+  background: #000;
+  transition: 0.3s linear;
+}
+.card-1 .poster {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  position: relative;
+}
+.card-1 .rest-card:hover {
+  min-width: 300px;
+  overflow: hidden;
+ transition: .7s ease-in;
+}
+.rest-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  left: 0;
+  top: 0;
+  z-index: 999999;
+  opacity: 0;
+  transition: 1s linear;
+}
+.rest-card img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  z-index: -1;
+}
+
+.rest-card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #000);
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+/* A SMALL BOX FOR ADDING DETAILS ABOUT MOVIES+++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.rest-card .box-1{
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  left: 0;
+  color: #ffff;
+  padding: 0 20px;
+}
+.rest-card .sub{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rest-card .sub p{
+  font-weight: 400;
+  font-size: 12px;
+  color: rgb(255, 255, 255, 0.7);
+}
+.rest-card .sub h3{
+  color: #ffff;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+.rest-card .sub span{
+  background-color: yellow;
+  color: #000;
+  padding: 0 1px;
+  margin: 0 5px 0 5px;
+  font-weight: 500;
+  border-radius: 2px;
+}
+.rest-card .sub i{
+  margin-right:  3px; 
+}
+.card-1:hover .rest-card{
+  opacity: 1;
+}
+
+/* making LEFT AND RIGHT arrow style++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+.arrow-l, .arrow-r{
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  width: 25px;
+  height: 25px;
+  background: rgb(225, 225, 225, 0.3);
+  color: #08e9f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: .3s linear;
+  z-index: 999999999;
+  opacity: 0;
+}
+.section .arrow-r{
+  left: unset;
+  right: 3%;
+}
+.section:hover .arrow-l{
+  opacity: 10;
+}
+.section:hover .arrow-r{
+  opacity: 1;
+}
